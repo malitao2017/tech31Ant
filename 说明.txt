@@ -1,0 +1,22 @@
+
+产生背景：
+maven还可以通过删减安装的jdk来调度编译的jdk环境，还能凑合用
+eclipse自己生成class文件和进行project clean根本不能忍，一直使用系统自定义的JAVA_HOME来运行
+
+目标：使用ant完成class文件jdk指定生成目标文件
+要求：带lib
+
+
+参考项目： tech02JarMain
+参考：很赞！
+http://peirenlei.iteye.com/blog/1688184
+
+bat运行jar包：
+http://raindrop.iteye.com/blog/423436
+http://lihengzkj.iteye.com/blog/1183809
+
+
+
+
+
+
