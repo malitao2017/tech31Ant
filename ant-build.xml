@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 
-<project default="jar" name="Acid">  
+<!--只打jar包-->
+<!--<project default="jar" name="Acid">-->  
+<!--运行jar包-->
+<project default="main" name="Acid">  
     <!-- 工程目录结构  
     project  
         |-bin  
@@ -29,6 +32,10 @@
   
     <!-- 1. 初始化工作，如创建目录等 -->  
     <target name="init">  
+        <!--先删除-->
+    	<delete dir="${classes.dir}"/>  
+        <delete dir="${output.dir}"/>  
+	
         <mkdir dir="${classes.dir}"/>  
         <mkdir dir="${output.dir}"/>  
     </target>  
@@ -71,4 +78,13 @@
             </manifest>  
         </jar>  
     </target>  
+	
+	
+	<!-- 4.运行jar包 -->
+	<target name="main" depends="jar">
+		<java classname="${mainclass}" classpath="${output.dir}/${jarname}">
+			<!--<arg value="0"/>-->
+		</java>
+	</target>
+	
 </project>  
